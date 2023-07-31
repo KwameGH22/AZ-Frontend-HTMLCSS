@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+    <style>
+        table {
+            width: 50%;
+            height: 300px;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+            border: 1px solid;
+        }
+       tr:hover {
+        background-color: darkgoldenrod;
+       }
+
+        caption {
+            margin-bottom: 10px;
+            font: bold;
+        }
+         td {
+            text-align: center;
+            
+        }
+        tr:nth-child(even){
+            background-color: gray;
+        }
+        th {
+            padding: 10px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <table >
+                <caption>A Random Table for Assignment purposes</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Country</th>
+                        <th scope="col">Capital</th>
+                        <th scope="col">Language</th>
+                        <th scope="col">Continent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ghana</td>
+                        <td>Accra</td>
+                        <td>English</td>
+                        <td>Africa</td>
+                    </tr>
+                    <tr>
+                        <td>Nigeria</td>
+                        <td>Abuja</td>
+                        <td>English</td>
+                        <td>Africa</td>
+                    </tr>
+                    <tr>
+                        <td>Togo</td>
+                        <td>Lome</td>
+                        <td>French</td>
+                        <td>Africa</td>
+                    </tr>
+                    <tr>
+                        <td>Rwanda</td>
+                        <td>Kigali</td>
+                        <td>English</td>
+                        <td>Africa</td>
+                    </tr>
+                    <tr>
+                        <td>Morocco</td>
+                        <td>Casablanca</td>
+                        <td>French</td>
+                        <td>Africa</td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+                
+            </table>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
