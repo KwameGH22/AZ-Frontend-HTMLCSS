@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <!--Within the <body> tag, create a <form> that collects basic user information, such as name, email address, and age.
+2. Implement appropriate form fields for each piece of information (text input for name and email, and number input for age).
+3. Use the appropriate HTML attributes to ensure that the form fields are required and have proper labels.
+-->
+    <form 
+        action="action.php"
+        method="Post"
+        target="_blank"
+        autocomplete
+        novalidate
+        >
+        <label for="firstName">First Name:</label>
+        <input
+            type="text"
+            name="firstname"
+            id="firstName"
+            placeholder="eg John"
+            required
+            autofocus
+            />
+        <br>
+        <label for="lastName">Last Name:</label>
+        <input
+            type="text"
+            name="lastname"
+            id="lastirstName"
+            placeholder="eg Doe"
+            required
+            />
+        <br>
+        
+        <label for="email">Email:</label>
+            <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="example@gmail.com"
+            required
+            />
+        <br>
+        <label for="age">Age:</label>
+        <input
+            type="number"
+            name="age"
+            id="age"
+            required
+            />
+        <br>
+<!--Task 2: Input Types
+1. Include input fields for phone number, date of birth (use the date input type), and a dropdown menu for the user's country of residence.
+2. Ensure that the phone number input accepts only numbers, the date of birth is displayed in a user-friendly format, and the country dropdown menu contains a list of different countries.-->
+        <label for="phoneNumber">Phone Number:</label>
+        <input
+            type="number"
+            name="phone"
+            id="phoneNumber"
+            required
+            placeholder="020-1234-000"
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"
+            />
+        <br>
+        <label for="DOB">Date of Birth:</label>
+        <input
+            type="date"
+            name="dateOfBirth"
+            id="DOB"
+            required
+            />
+        <br>
+        <label for="country">Country of Residence:</label>
+        <select
+            name="country"
+            id="country"
+            required
+            >
+                <option value="Ghana">Ghana</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Togo">Togo</option>
+                <option value="Burkina">Burkina</option>
+                <option value="Niger">Niger</option>
+                <option value="Gambia">Gambia</option>
+                <option value="Senegal">Senegal</option>
+        </select>
+        <br>
+    </form>
+</body>
+</html>
