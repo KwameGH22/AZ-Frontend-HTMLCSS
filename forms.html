@@ -6,6 +6,7 @@
     <title>HTML Forms</title>
 </head>
 <body>
+    <h1>REGISTRATION FORM</h1>
     <!--Within the <body> tag, create a <form> that collects basic user information, such as name, email address, and age.
 2. Implement appropriate form fields for each piece of information (text input for name and email, and number input for age).
 3. Use the appropriate HTML attributes to ensure that the form fields are required and have proper labels.
@@ -17,79 +18,177 @@
         autocomplete
         novalidate
         >
-        <label for="firstName">First Name:</label>
-        <input
-            type="text"
-            name="firstname"
-            id="firstName"
-            placeholder="eg John"
-            required
-            autofocus
-            />
-        <br>
-        <label for="lastName">Last Name:</label>
-        <input
-            type="text"
-            name="lastname"
-            id="lastirstName"
-            placeholder="eg Doe"
-            required
-            />
-        <br>
-        
-        <label for="email">Email:</label>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="firstName">First Name:</label>
             <input
-            type="text"
-            name="email"
-            id="email"
-            placeholder="example@gmail.com"
-            required
-            />
-        <br>
-        <label for="age">Age:</label>
-        <input
-            type="number"
-            name="age"
-            id="age"
-            required
-            />
-        <br>
+                type="text"
+                name="firstname"
+                id="firstName"
+                placeholder="eg John"
+                required
+                autofocus
+                pattern="[A-Za-z]{20}"
+                />
+            <br>
+            <label for="lastName">Last Name:</label>
+            <input
+                type="text"
+                name="lastname"
+                id="lastirstName"
+                placeholder="eg Doe"
+                required
+                pattern="[A-Za-z]{20}"
+                />
+            <br>
+            
+            <label for="email">Email:</label>
+                <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="example@gmail.com"
+                required
+                />
+            <br>
+            <label for="age">Age:</label>
+            <input
+                type="number"
+                name="age"
+                id="age"
+                required
+                pattern="[0-9]{3}"
+                />
+            <br>
 <!--Task 2: Input Types
 1. Include input fields for phone number, date of birth (use the date input type), and a dropdown menu for the user's country of residence.
 2. Ensure that the phone number input accepts only numbers, the date of birth is displayed in a user-friendly format, and the country dropdown menu contains a list of different countries.-->
-        <label for="phoneNumber">Phone Number:</label>
-        <input
-            type="number"
-            name="phone"
-            id="phoneNumber"
-            required
-            placeholder="020-1234-000"
-            pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"
+            <label for="phoneNumber">Phone Number:</label>
+            <input
+                type="number"
+                name="phone"
+                id="phoneNumber"
+                required
+                placeholder="020-1234-000"
+                pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"
+                />
+            <br>
+            <label for="DOB">Date of Birth:</label>
+            <input
+                type="date"
+                name="dateOfBirth"
+                id="DOB"
+                required
+                />
+            <br>
+            <label for="country">Country of Residence:</label>
+            <select
+                name="country"
+                id="country"
+                required
+                >
+                    <option value="Ghana">Ghana</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Burkina">Burkina</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Senegal">Senegal</option>
+            </select>
+        </fieldset>
+        <br>
+        <!--Task 3: Radio Buttons and Checkboxes
+1. Create a new form section to collect information about the user's interests.
+2. Include radio buttons for gender selection (Male, Female, Other) and checkboxes for the user to select multiple hobbies (e.g., Reading, Sports, Music, Travel, etc.).-->
+        <fieldset>
+            <legend>
+                Gender
+            </legend>
+            
+            <input
+                type="radio"
+                name="gender"
+                id="male"
+                value="Male"
+                required
+                
+                />
+            <label for="male">Male</label><br>
+            <input
+                type="radio"
+                name="gender"
+                id="female"
+                value="Female"
+                required
+                />
+            <label for="female">Female</label><br>
+            <input
+                type="radio"
+                name="gender"
+                id="other"
+                value="Other"
+                required
             />
+            <label for="other">Other</label><br>
+
+
+
+        </fieldset>
         <br>
-        <label for="DOB">Date of Birth:</label>
-        <input
-            type="date"
-            name="dateOfBirth"
-            id="DOB"
-            required
+        
+        <fieldset>
+            <legend>
+                Hobbies of Interest
+            </legend>
+            
+            <input
+                type="checkbox"
+                name="reading"
+                id="reading"
+                value="Reading"
+                required
+                
+                />
+            <label for="reading">Reading</label><br>
+            <input
+                type="checkbox"
+                name="sports"
+                id="sports"
+                value="Sports"
+                required
+                />
+            <label for="sports">Sports</label><br>
+            <input
+                type="checkbox"
+                name="music"
+                id="music"
+                value="Music"
+                required
             />
+            <label for="music">Music</label><br>
+            <input
+                type="checkbox"
+                name="travel"
+                id="travel"
+                value="Music"
+                required
+            />
+            <label for="travel">Travel</label><br> 
+            <br>
+            <br> 
+            <label for="">Comments</label>
+            <br>
+            <textarea 
+                id="comments"
+                rows="10"
+                cols="30"
+                placeholder="Please describe the hobby you like best">
+            </textarea>
+            <br>
+        </fieldset>
         <br>
-        <label for="country">Country of Residence:</label>
-        <select
-            name="country"
-            id="country"
-            required
-            >
-                <option value="Ghana">Ghana</option>
-                <option value="Nigeria">Nigeria</option>
-                <option value="Togo">Togo</option>
-                <option value="Burkina">Burkina</option>
-                <option value="Niger">Niger</option>
-                <option value="Gambia">Gambia</option>
-                <option value="Senegal">Senegal</option>
-        </select>
-        <br>
+        <input type="submit"
+        >
     </form>
 </body>
 </html>
