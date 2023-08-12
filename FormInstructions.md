@@ -58,3 +58,9 @@ Submission Guidelines:
 
 Good luck with your assignment! If you have any questions or need further clarification, feel free to ask.
  
+Feedback
+Very impressive solution.
+
+Check these few issues though.
+1. On line 69 and 74, attribute pattern has been specified for type number. It is only allowed when the input type is "email", "password", "search", "tel", "text" or "url".
+2. On line 179, the label does not have a value
