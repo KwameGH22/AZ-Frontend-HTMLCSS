@@ -1,0 +1,19 @@
+.heading {
+    background-color: aqua;
+    border: 1px solid line;
+}
+
+.padding {
+    padding : 10px;
+    background-color: antiquewhite;
+}
+
+ul > li {
+    color: red;
+    font-weight: 700;
+}
+
+li:hover {
+
+    background-color: grey;
+}
